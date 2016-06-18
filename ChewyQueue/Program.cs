@@ -1,15 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChewyQueue
+﻿namespace ChewyQueue
 {
-    class Program
+    using System;
+    using System.Threading.Tasks;
+
+    /// <summary>
+    /// The program.
+    /// </summary>
+    internal class Program
     {
-        static void Main(string[] args)
+        #region Methods
+
+        /// <summary>
+        /// The main entry point of the application.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
+        private static void Main(string[] args)
         {
+            Task.Factory.StartNew(new ChewyQueue().Start).Wait();
         }
+
+        #endregion
     }
 }
