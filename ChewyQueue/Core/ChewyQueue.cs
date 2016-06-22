@@ -247,8 +247,9 @@
                                 this.Random.Next(match.Top, match.Bottom));
 
                             Win32Imports.MoveMouse(randomPoint);
-                            await Task.Delay(50);
                             Win32Imports.LeftClickMouse(randomPoint);
+
+                            await Task.Delay(250);
                         }
                     }
                 }
